@@ -37,9 +37,29 @@ h2, h3 {
   font-size: 1.73rem;
 }
 
+h2 {
+  text-align: center;
+  color: #212121;
+}
+
+p {
+  color: #141414;
+  font-size: 1rem;
+}
+
+a {
+  color: #F4FFE3;
+  font-size: 1.44rem;
+}
+
 .cta-btn {
   width: 15.1875rem;
   height: 3.5625rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.44rem;
 }
 
 header {
@@ -62,6 +82,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4.1875rem;
+}
+
+.top-bar .cta-btn {
+  color: #1A1A1A;
+  background: #F3EE1E;
 }
 
 .logo img {
@@ -126,8 +151,187 @@ header {
   transition: all .4s ease-in;
 }
 
+.nav-wrapper {
+  -webkit-transition: right .5s ease-in-out;
+  transition: right .5s ease-in-out;
+  position: fixed;
+  top: 9.8125rem;
+  right: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: transparent;
+}
+
+.nav-wrapper.active {
+  visibility: visible;
+  right: 0;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 34.4375rem;
+  width: 20.3125rem;
+  background-color: #333333;
+}
+
+.nav-menu {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.nav-menu .nav-menu-link {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.nav-menu .nav-menu-link::after {
+  content: '';
+  width: 100%;
+  height: 0.03125rem;
+  position: absolute;
+  top: 200%;
+  left: 0;
+  background: #4D4D4D;
+}
+
 .hero-section img {
   max-width: 100%;
   margin-bottom: 6.625rem;
+}
+
+main section {
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  padding-top: 5.5625rem;
+}
+
+main .cta-btn {
+  color: #F3EE1E;
+  background: #212121;
+  -webkit-box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  margin-bottom: 2.9375rem;
+}
+
+.about p {
+  margin-bottom: 0.5rem;
+}
+
+.how-it-works {
+  text-align: center;
+}
+
+.how-it-works h2 {
+  margin-bottom: 4.4375rem;
+}
+
+.how-it-works li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3.25rem;
+}
+
+.how-it-works .list-number {
+  width: 2.125rem;
+  height: 2.125rem;
+  background: #212121;
+  color: #F3EE1E;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.44rem;
+  font-weight: 600;
+}
+
+.how-it-works .list-text {
+  margin-left: 1.75rem;
+  font-size: 1.2rem;
+}
+
+.how-it-works .cta-btn {
+  margin-top: 1.125rem;
+  margin-bottom: 4.375rem;
+}
+
+.features {
+  background: #FAFFF1;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 5.25rem;
+}
+
+.features li {
+  margin-bottom: 4.75rem;
+}
+
+.features .list-icon, .features .list-text {
+  margin: 0 auto;
+}
+
+.features .list-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 9.4375rem;
+  height: 9.4375rem;
+  margin-bottom: 2.0625rem;
+  background-color: #212121;
+  border-radius: 50%;
+}
+
+.features .list-text {
+  width: 13.4375rem;
+  font-size: 1.44rem;
+}
+
+.features .cta-btn {
+  margin-top: 0.5rem;
+  margin-bottom: 5.25rem;
 }
 /*# sourceMappingURL=main.css.map */

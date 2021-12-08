@@ -1,4 +1,9 @@
 .cta-btn {
     width: 15.1875rem;
-    height: 3.5625rem;    
+    height: 3.5625rem;
+    cursor: pointer;
+    border: none;
+    outline: none; 
+    font-family: 'Poppins', sans-serif;
+    font-size: $btn-text;   
 }

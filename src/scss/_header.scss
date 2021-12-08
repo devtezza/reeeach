@@ -12,9 +12,12 @@ header {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 4.1875rem;
-    
-}
 
+    .cta-btn {
+        color: $dark;
+        background: $primary;
+    }
+}
 
 .logo {
    
@@ -23,7 +26,6 @@ header {
         width: 86%;
     }
 }
-
 
 .menu-btn {
     // border: 1px solid white;
@@ -83,19 +85,63 @@ header {
 }
 
 
-// &.open {
-//     transform: rotate(720deg);
-//     background: transparent;
+.nav-wrapper {
+    // opacity: 50%;
+    // border: 1px solid gold;
+    transition: right .5s ease-in-out;
+    position: fixed;
+    // visibility: hidden;
+    top: 9.8125rem;
+    right: -100%;
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    background: transparent;
 
-//     &:before {
-//         transform: rotate(45deg) translate(0.3125rem, 0.5rem);
-//     }
+    &.active {
+        visibility: visible;
+        right: 0;
+    }
+    
+}
 
-//     &:after {
-//         width: 28px;
-//         transform: rotate(-45deg) translate(0.1875rem, 0.4375rem);
-//     }
-// }
+.nav {
+    display: flex;
+    justify-content: center;
+    height: 34.4375rem;
+    width: 20.3125rem;
+    background-color: $dark-minus;
+}
+
+.nav-menu {
+    // border: 1px solid gold;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;   
+
+    .nav-menu-link {
+        // border: 2px solid pink;
+        width: 100%;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            // border: 1px solid gold;
+            width: 100%;
+            height: 0.03125rem;
+            position: absolute;
+            top: 200%;
+            left: 0;
+            background: $secondary-minus;
+        }
+    }
+    
+}
 
 .hero-section {
     

@@ -1,11 +1,15 @@
 main {
-    padding-left: $horizontal;
-    padding-right: $horizontal;
+
+    section {
+        padding-left: $horizontal;
+        padding-right: $horizontal;
+        padding-top: $vertical;
+    }    
 
     .cta-btn {
         color: $primary;
         background: $secondary;
-        
+        box-shadow: 0 0.25rem 0.625rem hsla(0, 0%, 0%, .2);
     }
 }
 
@@ -22,6 +26,7 @@ main {
 }
 
 .how-it-works {
+    // border: 1px solid yellow;
     text-align: center;
 
     h2 {
@@ -55,5 +60,47 @@ main {
     .cta-btn {
         margin-top: 1.125rem;
         margin-bottom: 4.375rem;
+    }
+}
+
+.features {    
+    // border: 1px solid red;
+    background: $neutral-minus;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 5.25rem;
+    }
+
+    li {
+        margin-bottom: 4.75rem;
+    }
+
+    .list-icon, .list-text {
+        margin: 0 auto;
+    }
+
+    .list-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 9.4375rem;
+        height: 9.4375rem;
+        
+        margin-bottom: 2.0625rem;
+        background-color: $secondary;
+        border-radius: 50%;
+    }
+
+    .list-text {
+        width: 13.4375rem;
+        font-size: $list-item-2;
+        
+    }
+
+    .cta-btn {
+        margin-top: 0.5rem;
+        margin-bottom: 5.25rem;
     }
 }
