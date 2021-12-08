@@ -23,7 +23,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: 600;
   line-height: 1.2;
 }
@@ -40,6 +40,10 @@ h2, h3 {
 h2 {
   text-align: center;
   color: #212121;
+}
+
+h3 {
+  color: #F3EE1E;
 }
 
 p {
@@ -223,6 +227,10 @@ header {
   margin-bottom: 6.625rem;
 }
 
+main {
+  color: #212121;
+}
+
 main section {
   padding-left: 1.5625rem;
   padding-right: 1.5625rem;
@@ -333,5 +341,72 @@ main .cta-btn {
 .features .cta-btn {
   margin-top: 0.5rem;
   margin-bottom: 5.25rem;
+}
+
+.testimonials {
+  margin-bottom: 0.3125rem;
+}
+
+.testimonials h2 {
+  margin-bottom: 5.25rem;
+}
+
+.testimonial {
+  background: #FFFFFF;
+  width: 100%;
+  height: 25.8125rem;
+  margin-bottom: 5.25rem;
+}
+
+.testimonial header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8.3125rem;
+  padding: 1rem;
+}
+
+.testimonial h3 {
+  margin-bottom: 0.4375rem;
+}
+
+.testimonial .job-title {
+  font-size: 1.2rem;
+  color: #F9F68F;
+}
+
+.testimonial .header-text {
+  padding: 1.4375rem 0 0.9375rem 0.625rem;
+}
+
+.testimonial .header-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonial .avatar {
+  border: 0.125rem solid #F4FFE3;
+  width: 6.25rem;
+  border-radius: 50%;
+}
+
+.testimonial .content {
+  padding: 3.185rem 2.75rem 4.375rem 2.75rem;
+}
+
+.cta-section {
+  background: #FAFFF1;
+  text-align: center;
+}
+
+.cta-section .cta-btn {
+  margin: 5.25rem auto;
 }
 /*# sourceMappingURL=main.css.map */
