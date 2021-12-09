@@ -56,14 +56,26 @@ a {
   font-size: 1.44rem;
 }
 
-.cta-btn {
-  width: 15.1875rem;
-  height: 3.5625rem;
+button {
   cursor: pointer;
   border: none;
   outline: none;
   font-family: 'Poppins', sans-serif;
   font-size: 1.44rem;
+  height: 3.5625rem;
+}
+
+.cta-btn {
+  width: 15.1875rem;
+}
+
+.submit-btn {
+  width: 9.375rem;
+  background: #F3EE1E;
+  color: #1A1A1A;
+  font-weight: 500;
+  margin-top: 1.9375rem;
+  margin-bottom: 4.125rem;
 }
 
 header {
@@ -73,6 +85,10 @@ header {
   margin: 0;
   background: #212121;
   color: #F4FFE3;
+}
+
+header .logo img {
+  width: 86%;
 }
 
 .top-bar {
@@ -91,10 +107,6 @@ header {
 .top-bar .cta-btn {
   color: #1A1A1A;
   background: #F3EE1E;
-}
-
-.logo img {
-  width: 86%;
 }
 
 .menu-btn {
@@ -408,5 +420,70 @@ main .cta-btn {
 
 .cta-section .cta-btn {
   margin: 5.25rem auto;
+}
+
+footer {
+  padding: 4.59375rem 1.5625rem 1.6875rem 1.5625rem;
+  background: #212121;
+  color: #F4FFE3;
+}
+
+footer .logo {
+  text-align: center;
+}
+
+footer .logo img {
+  width: 32%;
+  margin-bottom: 3.875rem;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter label {
+  font-size: 1.2rem;
+}
+
+.email {
+  margin-top: 1.625rem;
+  width: 100%;
+  height: 3.5625rem;
+  font-size: 1rem;
+  color: #4D4D4D;
+  padding-left: 4.5625rem;
+  background: #F2F2F2 url("/assets/icons/envelope.svg") no-repeat 1.25rem center;
+  border: none;
+}
+
+.nav-menu-footer {
+  text-align: center;
+}
+
+.nav-menu-footer .nav-menu-link {
+  margin-bottom: 1.5rem;
+}
+
+.nav-menu-footer .nav-menu-link a {
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3.8125rem;
+}
+
+.attribution {
+  margin-top: 2.875rem;
+  text-align: center;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=main.css.map */

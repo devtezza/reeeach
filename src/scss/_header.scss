@@ -5,6 +5,14 @@ header {
     margin: 0;
     background: $secondary;
     color: $neutral;
+
+    .logo {
+   
+        img {
+            
+            width: 86%;
+        }
+    }
 }
 
 .top-bar {
@@ -19,13 +27,7 @@ header {
     }
 }
 
-.logo {
-   
-    img {
-        
-        width: 86%;
-    }
-}
+
 
 .menu-btn {
     // border: 1px solid white;
