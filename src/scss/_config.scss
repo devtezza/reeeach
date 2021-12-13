@@ -24,6 +24,9 @@ body {
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     
+    &.scrolling {
+        overflow-y: hidden;
+    }
        
 }
 
@@ -57,8 +60,25 @@ p {
 }
 
 a {
+    display: block;
     color: $neutral;
     font-size: $list-item-2;
+    // transform-origin: left;
+    transition: .25s ease-out;
+
+    &:hover {
+        color: $primary;
+    }
+
+    &.item-link:hover {
+        transform: translateY(-5px);
+    }
+
+    &.item-link-footer:hover {
+        transform: translateY(-2px);;
+    }
+
+    
 }
 
 @mixin media-sm {

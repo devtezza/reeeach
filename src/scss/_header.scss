@@ -24,23 +24,28 @@ header {
 
     .cta-btn {
         color: $dark;
-        background: $primary;
+        background: $primary;        
+
     }
+
 }
 
 
 
-.menu-btn {
-    // border: 1px solid white;
-    z-index: 1;    
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
+.menu-btn {         
+    
     height: 2.0625rem;
     width: 3.125rem;
     cursor: pointer;
-    transition: all .4s ease-in;  
+    transition: transform .35s ease-in-out;  
+
+    z-index: 501;
+
+    &:hover {
+        
+        transform: translate(-3px, 1px);        
+        
+    }
    
 }
 
@@ -87,6 +92,23 @@ header {
     }
 }
 
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    background: $dark-plus;
+    
+    &.active {
+        display: block;
+        opacity: 0.8;
+        visibility: visible;        
+    }
+ }
 
 .nav-wrapper {
     // opacity: 50%;
@@ -94,31 +116,51 @@ header {
     transition: right .5s ease-in-out;
     position: fixed;
     // visibility: hidden;
-    top: 9.8125rem;
-    right: -100%;
+    
     display: flex;
     justify-content: center;
     
     width: 100%;
     background: transparent;
 
-    &.active {
-        visibility: visible;
-        right: 0;
-    }
+    z-index: 501;
+
+    // &.active {
+    //     // visibility: visible;
+    //     right: 0;
+       
+    // }
     
 }
 
-.nav {
+.nav-menu-wrapper {
     // border: 1px solid orange;
     // height: 34.4375rem;
+    
+    
+    position: fixed;
+
+    visibility: hidden;
+    top: 9.8125rem;
+    right: -100%;
+
+    width: 86.66%;
+    height: calc(min(80vh, 40rem));
+
     display: flex;
     justify-content: center;
     
-    height: calc(min(80vh, 40rem));
-    
-    width: 86.66%;
     background-color: $dark-minus;
+    z-index: 501;
+
+    &.active {
+        visibility: visible;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    transition: all .4s ease-in-out, height 0s, width 0s;
+    
 }
 
 .nav-menu {
@@ -130,11 +172,26 @@ header {
     align-items: center;
     position: relative;   
 
-    .nav-menu-link {
+    .nav-menu-item {
         // border: 2px solid pink;
         width: 100%;
         text-align: center;
         position: relative;
+        transition: .2s ease-in;
+
+        
+        // &:hover {
+        //     transform: translateX(-5px);
+        // }
+
+        // a {
+            
+
+        //     &:hover {
+        //         // border: 1px solid red;
+        //         transform: translateY(-5px);
+        //     }
+        // }
 
         &::after {
             content: '';
