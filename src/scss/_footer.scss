@@ -34,12 +34,13 @@ footer {
     padding-left: 4.5625rem;
     
     background: $light-plus url('/assets/icons/envelope.svg') no-repeat 1.25rem center;
-    border: 2px solid transparent;
+    //border: 2px solid transparent;
+    border: none;
     outline: none;
 
     &:focus, &:focus-visible {
-        border: 2px solid $primary-plus;
-        
+        //border: 2px solid $primary-plus;
+        outline: 3px solid $primary-plus;
         background-color: $light;
     }
 
@@ -71,6 +72,7 @@ footer {
     margin-top: 3.8125rem;
 
     a {
+display: flex   ;
         svg {
             path {
                 transition: .4s ease-in-out;
@@ -88,6 +90,12 @@ footer {
                     fill: $neutral;
                 }
             }
+        }
+
+        &:focus, &:focus-visible {
+            outline: 3px solid $neutral;
+            outline-offset: 6px;
+            outline-style: solid;            
         }
     }
 }

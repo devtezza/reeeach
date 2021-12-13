@@ -12,23 +12,37 @@ button {
 
     &.primary-btn {
         
-        &:hover, &:focus {
+        &:hover {
             color: $primary;
+        }
+
+        &:focus, &:focus-visible {
+            outline: 3px solid $neutral;
+            outline-offset: 1px;
         }
     }
 
     &.secondary-btn {
-        &:hover, &:focus {
+
+        &:hover {
             color: $dark-plus
+        }
+
+        &:focus, &:focus-visible {
+            outline: 3px solid $primary-plus;
+            outline-offset: 2px;
+            box-shadow: none;
         }
     }
 
-    &:hover, &:focus {
+    &:hover {
 
         &:after {
             transform: scaleX(1);
         }
     }
+
+   
 }
 
 button:after {

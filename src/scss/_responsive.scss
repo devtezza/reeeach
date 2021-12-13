@@ -1,3 +1,41 @@
+// media-fallback is a media querie for devices smaller than 360px of width
+@include media-fallback {
+
+    html, body {
+        font-size: 15.5px;
+    }
+
+    .how-it-works {
+        text-align: center;
+        padding-bottom: $vertical - 1rem;        
+
+        li {            
+            margin-bottom: 1.5rem;
+        }
+
+        .list-number {
+            width: 2rem;
+            height: 2rem;
+            font-size: $list-item-1;
+            margin-left: 0.8rem;
+        }
+
+        .list-text {
+            margin-left: 0.5rem;
+            font-size: $paragraph;
+        }  
+    }
+
+    .testimonial {
+        height: 27.5rem;
+    }
+
+    .email {
+        background-image: none;
+        padding-left: 2rem;
+    }
+}
+
 @include media-sm {
     
 
@@ -106,14 +144,6 @@
         height: 5.8125rem;
         width: 86%;
     }
-    
-    // .nav {        
-    //     background-color: transparent;
-    //     height: 5.8125rem;
-
-    //     width: 86%;
-       
-    // }
 
     .nav-menu {
         flex-direction: row;        
@@ -124,11 +154,7 @@
         margin-left: calc(min(10%, 14.45rem));
     
         .nav-menu-item {
-            width: auto;
-
-            // &:hover {
-            //     transform: translateY(-5px);
-            // }
+            width: auto;            
 
             &::after {
                 display: none;
@@ -240,7 +266,7 @@
             }
         }
 
-        .cta-btn {
+        .cta-btn {            
             margin-top: 7.5625rem;
             margin-bottom: 5.9375rem;
         }
@@ -330,7 +356,7 @@
         padding: 7.125rem calc(2.8125rem + 2.75%) 0 calc(2.8125rem + 2.75%);
         display: grid;
 
-        grid-template-rows: 2fr 2fr 0.5fr;
+        grid-template-rows: 1.7fr 0.8fr 0.3fr;
         grid-template-columns: auto;
         grid-template-areas: "logo newsletter" "nav-footer social-icons" "attribution attribution";
         gap: 1px;
@@ -344,22 +370,58 @@
             text-align: left;
             
             img {
+                // border: 1px solid red;
                 width: 50%;
-                margin-bottom: 5.1875rem;
+                // margin-bottom: 2.1875rem;
             }
         }
 
+        // .newsletter {
+        //     grid-area: newsletter;
+        // }
+
         .newsletter {
             grid-area: newsletter;
+            display: grid;
+            grid-template-rows: 0.5fr 1fr;
+            grid-template-columns: auto;
+            grid-template-areas: "email-label email-label" "email submit-btn";
+    
+            justify-content: end;
+            align-content: start;
+    
+            justify-items: start;
+            row-gap: 1.175rem;
+            column-gap: 1.5625rem;
+            
+            width: 33.25rem;
+        }
+    
+        .email-label, .email, .submit-btn {
+            margin: initial;
+        }
+    
+        .email {
+            grid-area: email;        
+        }
+    
+        .email-label {
+            grid-area: email-label;
+        }
+    
+        .submit-btn {
+            grid-area: submit-btn;
         }
        
         .nav-footer {
             // border: 1px solid green;
             margin: initial;
-            grid-area: nav-footer; 
+            grid-area: nav-footer;
+            // align-self: ; 
         }
 
         .nav-menu-footer {
+            
             display: flex;
             justify-content: flex-start;
             text-align: left;
@@ -378,19 +440,28 @@
         }
     }
 
-    .social-icons {
-        // border: 1px solid orange;
-        grid-area: social-icons;
-        padding-top: 2rem;            
+    // .social-icons {
+    //     border: 1px solid orange;
+    //     grid-area: social-icons;
+    //     padding-top: 2rem;            
 
+    // }
+
+    .social-icons {
+        // border: 1px solid red;
+        grid-area: social-icons;
+        padding: 0 0 1.5rem 0;               
+        margin: 0;
+        align-self: end;
+        justify-self: end;
     }
 
     .attribution {
         // border: 1px solid gold;
         grid-area: attribution;
         // margin: initial;
-        margin-top: 0;
-        padding-bottom: 2.6875rem;
+        margin-top: 2.6875rem;
+        padding-bottom: 0.5rem;
     }
 
     
@@ -448,52 +519,7 @@
         padding-bottom: 10.3125rem;
     }
 
-    footer {
+    footer {        
         padding: 7.125rem 8.875rem 0 8.875rem;
     }
-
-    .newsletter {
-        display: grid;
-        grid-template-rows: 0.5fr 1fr;
-        grid-template-columns: auto;
-        grid-template-areas: "email-label email-label" "email submit-btn";
-
-        justify-content: end;
-        align-content: start;
-
-        justify-items: start;
-        row-gap: 2.875rem;
-        column-gap: 1.5625rem;
-        
-        width: 33.25rem;
-    }
-
-    .email-label, .email, .submit-btn {
-        margin: initial;
-    }
-
-    .email {
-        grid-area: email;        
-    }
-
-    .email-label {
-        grid-area: email-label;
-    }
-
-    .submit-btn {
-        grid-area: submit-btn;
-    }
-
-    .social-icons {
-        // border: 1px solid red;
-        padding-top: 0;               
-        margin: initial;
-        align-self: center;
-        justify-self: end;
-    }
-
-
-    // .email {
-    //     width: 22.3125rem;
-    // }
 }

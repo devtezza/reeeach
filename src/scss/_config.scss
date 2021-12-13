@@ -66,7 +66,7 @@ a {
     // transform-origin: left;
     transition: .25s ease-out;
 
-    &:hover {
+    &.item-link:hover, &.item-link-footer:hover {
         color: $primary;
     }
 
@@ -78,6 +78,14 @@ a {
         transform: translateY(-2px);;
     }
 
+    &.item-link:focus, &.item-link:focus-visible {
+       outline: 1px solid $neutral;
+       outline-offset: 5px;
+    }
+
+    &.item-link-footer:focus, &.item-link-footer:focus-visible {
+        text-decoration: underline double;
+     }
     
 }
 
@@ -101,6 +109,12 @@ a {
 
 @mixin media-xl {
     @media screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin media-fallback {
+    @media screen and (max-width: 360px) {
         @content;
     }
 }
