@@ -88,7 +88,7 @@ a {
     }
 
     &.item-link-footer:focus, &.item-link-footer:focus-visible {
-        text-decoration: underline double;
+        text-decoration: underline 4px dashed $primary;                        
      }
     
 }

@@ -86,8 +86,8 @@ a.item-link:focus, a.item-link:focus-visible {
 }
 
 a.item-link-footer:focus, a.item-link-footer:focus-visible {
-  -webkit-text-decoration: underline double;
-          text-decoration: underline double;
+  -webkit-text-decoration: underline 4px dashed #F3EE1E;
+          text-decoration: underline 4px dashed #F3EE1E;
 }
 
 button {
@@ -630,6 +630,8 @@ footer .logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .social-icons a svg path {
@@ -647,8 +649,8 @@ footer .logo img {
 }
 
 .social-icons a:focus, .social-icons a:focus-visible {
-  outline: 3px solid #F4FFE3;
-  outline-offset: 6px;
+  outline: 2px solid #F4FFE3;
+  outline-offset: 8px;
   outline-style: solid;
 }
 
