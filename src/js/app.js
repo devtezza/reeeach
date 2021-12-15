@@ -4,17 +4,30 @@ const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
 const itemLink = document.querySelectorAll('.item-link');
 const itemLinkFooter = document.querySelectorAll('.item-link-footer');
-const itemLinkButton = document.querySelector('.item-link-button');
+const itemLinkButton = document.querySelectorAll('.item-link-button');
+const allLinks = [itemLink, itemLinkFooter, itemLinkButton];
 
-console.log (itemLink);
-console.log(itemLinkFooter);
-console.log(itemLinkButton);
+console.log(allLinks);
+
+watchLinks(allLinks);
 
 
-itemLink.forEach(link => {
-    link.addEventListener('click', () => console.log('clicked'));
-});
+// console.log (itemLink);
+// console.log(itemLinkFooter);
+// console.log(itemLinkButton);
 
+function watchLinks(allLinks) {
+    for (i = 0; i < 3; i++) {
+        allLinks[i].forEach(link => {
+            link.addEventListener('click', closeMenu);
+            // console.log(link);
+        })
+    }
+}
+
+// itemLink.forEach(link => {
+//     link.addEventListener('click', () => console.log('clicked'));
+// });
 
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
@@ -22,10 +35,10 @@ overlay.addEventListener('click', toggleMenu);
 
 function verifyMenu() {
     if (navMenuWrapper.classList.contains('active')) {
-        console.log('menu is active');
+        // console.log('menu is active');
         return true;
     } else {
-        console.log('menu is INACTIVE');
+        // console.log('menu is INACTIVE');
         return false;
     }
 }
@@ -39,24 +52,18 @@ function toggleMenu() {
 
 // Closes menu on resize and on any menu-link
 function closeMenu() {
+    console.log('enter closeMenu function');
     if (verifyMenu()) {
         toggleMenu();
+    }
+    else {
+        console.log('menu is already closed');
     } 
 }
 
-
-
-
 window.addEventListener('resize', () => {
     
-    if (this.innerWidth > 1023) {
-        console.log('window has been resized, but is media-lg or larger');
+    if (this.innerWidth > 1023) {        
         closeMenu();
     } 
-    
-    // else {
-    //     console.log('window has been resized, but is media-md or smaller');
-    //     preventAnimation();
-    // }
-    
  });
