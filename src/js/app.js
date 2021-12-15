@@ -2,8 +2,23 @@ const menuBtn = document.querySelector('.menu-btn');
 const overlay = document.querySelector('.overlay');
 const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
+const itemLink = document.querySelectorAll('.item-link');
+const itemLinkFooter = document.querySelectorAll('.item-link-footer');
+const itemLinkButton = document.querySelector('.item-link-button');
+
+console.log (itemLink);
+console.log(itemLinkFooter);
+console.log(itemLinkButton);
+
+
+itemLink.forEach(link => {
+    link.addEventListener('click', () => console.log('clicked'));
+});
+
+
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
+
 
 function verifyMenu() {
     if (navMenuWrapper.classList.contains('active')) {
@@ -22,33 +37,21 @@ function toggleMenu() {
     document.body.classList.toggle('scrolling');
 }
 
-function resetAnimation() {
-    console.log('inside function resetAnimation');
-    navMenuWrapper.classList.remove('prevent-slide-animation');
-}
-
-function preventAnimation() {
-    if(!verifyMenu()) {
-        console.log('inside funcion preventAnimation');
-        if(!navMenuWrapper.classList.contains('prevent-slide-animation')) {
-            navMenuWrapper.classList.add('prevent-slide-animation');
-            navMenuWrapper.addEventListener('transitioned', resetAnimation());
-        }
-    }
-          
-}
-
-function closeMenuOnResize() {
+// Closes menu on resize and on any menu-link
+function closeMenu() {
     if (verifyMenu()) {
         toggleMenu();
     } 
 }
 
+
+
+
 window.addEventListener('resize', () => {
     
     if (this.innerWidth > 1023) {
         console.log('window has been resized, but is media-lg or larger');
-        closeMenuOnResize();
+        closeMenu();
     } 
     
     // else {

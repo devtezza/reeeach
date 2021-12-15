@@ -5,7 +5,11 @@
     outline: none;
     list-style: none;
     text-decoration: none; 
- }
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body, html {
     font-size: 16px;

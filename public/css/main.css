@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   font-size: 16px;
   background: #FFFFFF;
