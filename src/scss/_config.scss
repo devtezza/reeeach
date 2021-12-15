@@ -10,11 +10,17 @@
 body, html {
     font-size: 16px;
     background: $light-minus;
+    scroll-behavior: smooth;
 }
+
+// header {
+//     overflow-y: hidden;
+// }
 
 body {
     // max-width: 1920px;
-    background: $light; 
+    background: $light;
+    overflow-x: hidden;
     // border: 1px solid red;
 
     max-width: 1440px;
@@ -28,6 +34,17 @@ body {
         overflow-y: hidden;
     }
        
+}
+
+.logo {
+
+    a {
+        &:hover {
+            transform: translateY(-5px);
+            
+        }
+    }
+   
 }
 
 h1, h2, h3 {
@@ -84,7 +101,7 @@ a {
     }
 
     &.item-link-footer:focus, &.item-link-footer:focus-visible {
-        text-decoration: underline double;
+        text-decoration: underline 4px dashed $primary;                        
      }
     
 }

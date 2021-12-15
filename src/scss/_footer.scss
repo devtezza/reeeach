@@ -5,11 +5,16 @@ footer {
 
     .logo {
         // border: 1px solid white;
+        margin-bottom: 3.875rem;
         text-align: center;
+
+        // a {            
+        //     border: 1px solid red;
+        // }
 
         img {
             width: 32%;
-            margin-bottom: 3.875rem;
+            
         }
     }
 }
@@ -58,8 +63,7 @@ footer {
         //     transform: translateY(-2px);
         // }
 
-        a { 
-            
+        a {             
             font-size: $subtitle;
         }
     }
@@ -72,16 +76,15 @@ footer {
     margin-top: 3.8125rem;
 
     a {
-display: flex   ;
+        display: flex;
+        transition: .4s ease-in-out;
+
         svg {
             path {
                 transition: .4s ease-in-out;
             }
         }
-    }
 
-    a {
-        
         &:hover {
             transform: translateY(-5px);
             // transform: rotate(10deg) translateY(-5px);
@@ -93,11 +96,11 @@ display: flex   ;
         }
 
         &:focus, &:focus-visible {
-            outline: 3px solid $neutral;
-            outline-offset: 6px;
-            outline-style: solid;            
+            outline: 2px dashed $neutral;
+            outline-offset: 8px;
+            // outline-style: solid;            
         }
-    }
+    }    
 }
 
 .attribution {

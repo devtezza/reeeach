@@ -11,10 +11,12 @@
 body, html {
   font-size: 16px;
   background: #FFFFFF;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #F2F2F2;
+  overflow-x: hidden;
   max-width: 1440px;
   min-width: 300px;
   margin: 0 auto;
@@ -24,6 +26,11 @@ body {
 
 body.scrolling {
   overflow-y: hidden;
+}
+
+.logo a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 h1, h2, h3 {
@@ -82,8 +89,8 @@ a.item-link:focus, a.item-link:focus-visible {
 }
 
 a.item-link-footer:focus, a.item-link-footer:focus-visible {
-  -webkit-text-decoration: underline double;
-          text-decoration: underline double;
+  -webkit-text-decoration: underline 4px dashed #F3EE1E;
+          text-decoration: underline 4px dashed #F3EE1E;
 }
 
 button {
@@ -186,6 +193,8 @@ header .logo img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4.1875rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .top-bar .cta-btn {
@@ -272,7 +281,7 @@ header .logo img {
 
 .overlay.active {
   display: block;
-  opacity: 0.8;
+  opacity: 0.9;
   visibility: visible;
 }
 
@@ -447,6 +456,8 @@ main .cta-btn {
 
 .features h2 {
   margin-bottom: 5.25rem;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .features li {
@@ -477,6 +488,8 @@ main .cta-btn {
 .features .list-text {
   width: 13.4375rem;
   font-size: 1.44rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .features .cta-btn {
@@ -489,6 +502,8 @@ main .cta-btn {
 }
 
 .testimonials h2 {
+  -webkit-transform-origin: right;
+          transform-origin: right;
   margin-bottom: 5.25rem;
 }
 
@@ -562,12 +577,12 @@ footer {
 }
 
 footer .logo {
+  margin-bottom: 3.875rem;
   text-align: center;
 }
 
 footer .logo img {
   width: 32%;
-  margin-bottom: 3.875rem;
 }
 
 .newsletter {
@@ -626,6 +641,8 @@ footer .logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .social-icons a svg path {
@@ -643,9 +660,8 @@ footer .logo img {
 }
 
 .social-icons a:focus, .social-icons a:focus-visible {
-  outline: 3px solid #F4FFE3;
-  outline-offset: 6px;
-  outline-style: solid;
+  outline: 2px dashed #F4FFE3;
+  outline-offset: 8px;
 }
 
 .attribution {

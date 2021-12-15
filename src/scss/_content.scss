@@ -13,6 +13,10 @@ main {
     }
 }
 
+// .about {
+//     border: 1px solid red;
+// }
+
 .intro {
     // border: 1px solid blue; 
     text-align: center;
@@ -83,6 +87,7 @@ main {
 
     h2 {
         margin-bottom: 5.25rem;
+        transform-origin: left;
     }
 
     li {
@@ -109,6 +114,7 @@ main {
     .list-text {
         width: 13.4375rem;
         font-size: $list-item-2;
+        transform-origin: right;
         
     }
 
@@ -120,8 +126,10 @@ main {
 
 .testimonials {
     // border: 1px solid gold;
+    
     margin-bottom: 0.3125rem;
     h2 {
+        transform-origin: right;
         margin-bottom: 5.25rem;
     }
 }

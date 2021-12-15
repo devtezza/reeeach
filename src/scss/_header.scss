@@ -21,7 +21,8 @@ header {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 4.1875rem;
-
+    transform-origin: right;
+    
     .cta-btn {
         color: $dark;
         background: $primary;        
@@ -105,7 +106,7 @@ header {
     
     &.active {
         display: block;
-        opacity: 0.8;
+        opacity: 0.9;
         visibility: visible;        
     }
  }
@@ -177,21 +178,7 @@ header {
         width: 100%;
         text-align: center;
         position: relative;
-        transition: .2s ease-in;
-
-        
-        // &:hover {
-        //     transform: translateX(-5px);
-        // }
-
-        // a {
-            
-
-        //     &:hover {
-        //         // border: 1px solid red;
-        //         transform: translateY(-5px);
-        //     }
-        // }
+        transition: .2s ease-in;        
 
         &::after {
             content: '';
