@@ -32,7 +32,7 @@ body.scrolling {
 }
 
 header {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 a, button, .menu-btn {
@@ -312,7 +312,7 @@ header .logo img {
 .nav-menu-wrapper {
   position: fixed;
   visibility: hidden;
-  top: 9.8125rem;
+  top: 8.5rem;
   right: -100%;
   width: 86.66%;
   height: 80vh;
