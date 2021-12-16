@@ -7,14 +7,8 @@ const itemLinkFooter = document.querySelectorAll('.item-link-footer');
 const itemLinkButton = document.querySelectorAll('.item-link-button');
 const allLinks = [itemLink, itemLinkFooter, itemLinkButton];
 
-console.log(allLinks);
-
+// Call the function watchLinks to close mobile menu (if opened) when a link is clicked
 watchLinks(allLinks);
-
-
-// console.log (itemLink);
-// console.log(itemLinkFooter);
-// console.log(itemLinkButton);
 
 function watchLinks(allLinks) {
     for (i = 0; i < 3; i++) {
@@ -25,20 +19,14 @@ function watchLinks(allLinks) {
     }
 }
 
-// itemLink.forEach(link => {
-//     link.addEventListener('click', () => console.log('clicked'));
-// });
-
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
 
 
 function verifyMenu() {
-    if (navMenuWrapper.classList.contains('active')) {
-        // console.log('menu is active');
+    if (navMenuWrapper.classList.contains('active')) {        
         return true;
-    } else {
-        // console.log('menu is INACTIVE');
+    } else {        
         return false;
     }
 }
@@ -67,3 +55,30 @@ window.addEventListener('resize', () => {
         closeMenu();
     } 
  });
+
+
+ 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+tlHeader = gsap.timeline({
+    scrollTrigger: {
+        trigger: "header",        
+    }
+});
+
+tlAbout = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".about",
+        markers: true,
+        start: "center center"
+    }
+})
+
+tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
+tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
+tlHeader.from(".top-bar", {opacity: 0, duration: 2, ease: "power4.inOut"});
+
+tlAbout.from(".intro h2", {x: 1000, duration: 2, ease: "power4.out"});
+ 

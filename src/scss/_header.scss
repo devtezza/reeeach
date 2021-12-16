@@ -21,6 +21,7 @@ header {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 4.1875rem;
+    transform-origin: left;
 
     .cta-btn {
         color: $dark;
