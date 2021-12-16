@@ -37,6 +37,10 @@ body {
        
 }
 
+header {
+    min-height: 100vh;
+}
+
 a, button, .menu-btn {
     -webkit-tap-highlight-color: transparent;
 }

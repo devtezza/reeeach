@@ -31,6 +31,10 @@ body.scrolling {
   overflow-y: hidden;
 }
 
+header {
+  min-height: 100vh;
+}
+
 a, button, .menu-btn {
   -webkit-tap-highlight-color: transparent;
 }
@@ -311,7 +315,7 @@ header .logo img {
   top: 9.8125rem;
   right: -100%;
   width: 86.66%;
-  height: calc(min(80vh, 40rem));
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

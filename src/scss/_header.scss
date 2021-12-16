@@ -146,7 +146,8 @@ header {
     right: -100%;
 
     width: 86.66%;
-    height: calc(min(80vh, 40rem));
+    // height: calc(min(80vh, 40rem));
+    height: max(80vh);
 
     display: flex;
     justify-content: center;
