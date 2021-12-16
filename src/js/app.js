@@ -71,14 +71,22 @@ tlHeader = gsap.timeline({
 tlAbout = gsap.timeline({
     scrollTrigger: {
         trigger: ".about",
-        markers: true,
-        start: "center center"
+        // markers: true,
+        start: "10% center",
+        end: "bottom center"
     }
-})
+});
 
 tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
 tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
 tlHeader.from(".top-bar", {opacity: 0, duration: 2, ease: "power4.inOut"});
 
-tlAbout.from(".intro h2", {x: 1000, duration: 2, ease: "power4.out"});
+// Animations at About Section -> Intro
+tlAbout.from(".intro h2", {x: 3000, duration: 1, ease: "power4.out"});
+tlAbout.from(".intro p", {x: 3000, duration: 2, ease: "power4.out"});
+tlAbout.from(".intro .cta-btn", {x: 3000, duration: 0.1, ease: "power4.out"});
+
+// Animations at About Section -> How It Works
+tlAbout.from(".how-it-works h2", {x: -3000, duration: 2, ease: "power4.out"});
+tlAbout.from(".how-it-works ul", {x: -3000, duration: 3, ease: "power4.out"});
  
