@@ -77,16 +77,31 @@ tlAbout = gsap.timeline({
     }
 });
 
+tlFeatures = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".features",
+        markers: true,
+        start: "top center",
+        end: "bottom center",
+    }
+});
+
+
+// Animations for in tlHeader
 tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
 tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
 tlHeader.from(".top-bar", {opacity: 0, duration: 2, ease: "power4.inOut"});
 
-// Animations at About Section -> Intro
+// Animations in tlAbout (div -> Intro)
 tlAbout.from(".intro h2", {x: 3000, duration: 1, ease: "power4.out"});
 tlAbout.from(".intro p", {x: 3000, duration: 2, ease: "power4.out"});
 tlAbout.from(".intro .cta-btn", {x: 3000, duration: 0.1, ease: "power4.out"});
 
-// Animations at About Section -> How It Works
+// Animations for tlAbout (div -> How It Works)
 tlAbout.from(".how-it-works h2", {x: -3000, duration: 2, ease: "power4.out"});
 tlAbout.from(".how-it-works ul", {x: -3000, duration: 3, ease: "power4.out"});
- 
+
+// Animations for tlFeatures
+tlFeatures.from(".features h2", {x: 3000, duration: 2, ease: "power4.out"});
+tlFeatures.from(".feature", {scale: 0, duration: 3, ease: "power2.out", stagger: 0.7});
+tlFeatures.from(".features .cta-btn", {x: -3000, duration: 0.1, ease: "power4.out"});
