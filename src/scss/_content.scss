@@ -14,7 +14,7 @@ main {
 }
 
 .intro {
-    // border: 1px solid blue; 
+    
     text-align: center;
 
     h2 {
@@ -26,7 +26,13 @@ main {
         text-align: left;
     }
 
+    // a{
+    //     display: initial;
+    //     border: 1px solid black;
+    // }
+
     .cta-btn {
+        
         margin: 4.375rem auto 1.125rem auto;        
         // margin-top: 4.375rem;
         // margin-bottom: 1.125rem;        

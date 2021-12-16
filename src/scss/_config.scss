@@ -34,6 +34,10 @@ body {
        
 }
 
+a, button, .menu-btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .logo {
 
     a {

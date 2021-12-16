@@ -30,6 +30,10 @@ body.scrolling {
   overflow-y: hidden;
 }
 
+a, button, .menu-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .logo a:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
@@ -210,7 +214,6 @@ header .logo img {
   transition: -webkit-transform .35s ease-in-out;
   transition: transform .35s ease-in-out;
   transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
-  z-index: 501;
 }
 
 .menu-btn:hover {
@@ -273,7 +276,6 @@ header .logo img {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 500;
   opacity: 0;
   visibility: hidden;
   background: #000000;
@@ -653,7 +655,7 @@ footer .logo img {
   fill: #F4FFE3;
 }
 
-.social-icons a:focus, .social-icons a:focus-visible {
+.social-icons a:focus-visible {
   outline: 2px solid #F4FFE3;
   outline-offset: 8px;
   outline-style: solid;

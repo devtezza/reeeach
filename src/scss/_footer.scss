@@ -94,7 +94,7 @@ footer {
             }
         }
 
-        &:focus, &:focus-visible {
+        &:focus-visible {
             outline: 2px solid $neutral;
             outline-offset: 8px;
             outline-style: solid;            

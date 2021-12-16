@@ -7,8 +7,8 @@ header {
     background: $secondary;
     color: $neutral;
 
-    .logo {
-   
+    .logo {        
+        
         img {
             
             width: 86%;
@@ -39,7 +39,7 @@ header {
     cursor: pointer;
     transition: transform .35s ease-in-out;  
 
-    z-index: 501;
+    // z-index: 501;
 
     &:hover {
         
@@ -98,7 +98,7 @@ header {
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 500;
+    // z-index: 500;
     opacity: 0;
     visibility: hidden;
     background: $dark-plus;
