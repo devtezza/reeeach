@@ -80,7 +80,7 @@ tlAbout = gsap.timeline({
 tlFeatures = gsap.timeline({
     scrollTrigger: {
         trigger: ".features",
-        markers: true,
+        // markers: true,
         start: "top center",
         end: "bottom center",
     }
