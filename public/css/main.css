@@ -181,6 +181,8 @@ button:after {
 }
 
 header {
+  -webkit-transition: padding-top .5s ease-in-out;
+  transition: padding-top .5s ease-in-out;
   padding-left: 1.5625rem;
   padding-right: 1.5625rem;
   padding-top: 2.85125rem;
@@ -188,6 +190,10 @@ header {
   margin: 0;
   background: #212121;
   color: #F4FFE3;
+}
+
+header.active {
+  padding-top: 1.3rem;
 }
 
 header .logo img {
@@ -222,6 +228,7 @@ header .logo img {
   transition: -webkit-transform .35s ease-in-out;
   transition: transform .35s ease-in-out;
   transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+  z-index: 501;
 }
 
 .menu-btn:hover {
@@ -313,10 +320,10 @@ header .logo img {
 .nav-menu-wrapper {
   position: fixed;
   visibility: hidden;
-  top: 8.5rem;
+  top: 6.64875rem;
   right: -100%;
   width: 86.66%;
-  height: 80vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

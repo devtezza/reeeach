@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const menuBtn = document.querySelector('.menu-btn');
 const overlay = document.querySelector('.overlay');
 const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
@@ -35,6 +36,7 @@ function toggleMenu() {
     menuBtn.classList.toggle('active');
     navMenuWrapper.classList.toggle('active');
     overlay.classList.toggle('active');
+    header.classList.toggle('active');
     document.body.classList.toggle('scrolling');
 }
 
@@ -64,7 +66,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 tlHeader = gsap.timeline({
     scrollTrigger: {
-        trigger: "header",        
+        trigger: header,        
     }
 });
 

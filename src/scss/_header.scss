@@ -1,11 +1,17 @@
-header {    
+header { 
+    transition: padding-top .5s ease-in-out;   
     padding-left: $horizontal;
     padding-right: $horizontal;
     padding-top: 2.85125rem;
+    // padding-top: 1.3rem;
     padding-bottom: 6.625rem;
     margin: 0;
     background: $secondary;
     color: $neutral;
+
+    &.active {
+        padding-top: 1.3rem;
+    }
 
     .logo {        
         
@@ -40,7 +46,7 @@ header {
     cursor: pointer;
     transition: transform .35s ease-in-out;  
 
-    // z-index: 501;
+    z-index: 501;
 
     &:hover {
         
@@ -144,13 +150,13 @@ header {
     visibility: hidden;
         
     // top: 9.8125rem;
-    top: 8.5rem;
+    top: 6.64875rem;
     
     right: -100%;
 
     width: 86.66%;
     // height: calc(min(80vh, 40rem));
-    height: max(80vh);
+    height: max(85vh);
 
     display: flex;
     justify-content: center;
