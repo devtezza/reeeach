@@ -7,6 +7,7 @@ const itemLink = document.querySelectorAll('.item-link');
 const itemLinkFooter = document.querySelectorAll('.item-link-footer');
 const itemLinkButton = document.querySelectorAll('.item-link-button');
 const allLinks = [itemLink, itemLinkFooter, itemLinkButton];
+const testimonial = document.querySelectorAll('.testimonial');
 
 // Call the function watchLinks to close mobile menu (if opened) when a link is clicked
 watchLinks(allLinks);
@@ -88,22 +89,63 @@ tlFeatures = gsap.timeline({
     }
 });
 
+tlTestimonials = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".testimonials",
+        // markers: true,
+        start: "top center",
+        end: "bottom center",
+    }
+});
 
-// Animations for in tlHeader
-tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
-tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
-tlHeader.from(".top-bar", {opacity: 0, duration: 2, ease: "power4.inOut"});
+tlCtaSection = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".cta-section",
+        markers: true,
+        start: "top center",
+        end: "bottom center",
+    }
+});
 
-// Animations in tlAbout (div -> Intro)
-tlAbout.from(".intro h2", {x: 3000, duration: 1, ease: "power4.out"});
-tlAbout.from(".intro p", {x: 3000, duration: 2, ease: "power4.out"});
-tlAbout.from(".intro .cta-btn", {x: 3000, duration: 0.1, ease: "power4.out"});
 
-// Animations for tlAbout (div -> How It Works)
-tlAbout.from(".how-it-works h2", {x: -3000, duration: 2, ease: "power4.out"});
-tlAbout.from(".how-it-works ul", {x: -3000, duration: 3, ease: "power4.out"});
 
-// Animations for tlFeatures
-tlFeatures.from(".features h2", {x: 3000, duration: 2, ease: "power4.out"});
-tlFeatures.from(".feature", {scale: 0, duration: 3, ease: "power2.out", stagger: 0.7});
-tlFeatures.from(".features .cta-btn", {x: -3000, duration: 0.1, ease: "power4.out"});
+
+ScrollTrigger.matchMedia({
+    // only for desktop and CTA Section
+    "(min-width: 1024px)": () => {
+        tlCtaSection.from(".cta-section .cta-img", {x: 3000, rotation: 360, duration: 2, ease:"power4.out"});
+    },
+
+    // all devices and sections
+    "all": () => {
+        // Animations for in tlHeader
+        tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
+        tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
+        tlHeader.from(".top-bar", {opacity: 0, duration: 2, ease: "power4.inOut"});
+
+        // Animations in tlAbout (div -> Intro)
+        tlAbout.from(".intro h2", {x: 3000, duration: 1, ease: "power4.out"});
+        tlAbout.from(".intro p", {x: 3000, duration: 2, ease: "power4.out"});
+        tlAbout.from(".intro .cta-btn", {x: 3000, duration: 0.1, ease: "power4.out"});
+
+        // Animations for tlAbout (div -> How It Works)
+        tlAbout.from(".how-it-works h2", {x: -3000, duration: 2, ease: "power4.out"});
+        tlAbout.from(".how-it-works ul", {x: -3000, duration: 3, ease: "power4.out"});
+
+        // Animations for tlFeatures
+        tlFeatures.from(".features h2", {x: 3000, duration: 2, ease: "power4.out"});
+        tlFeatures.from(".feature", {scale: 0, duration: 3, ease: "power2.out", stagger: 0.7});
+        tlFeatures.from(".features .cta-btn", {x: -3000, duration: 0.1, ease: "power4.out"});
+
+        // Animations for tlTestimonials
+        tlTestimonials.from(".testimonials h2", {x: -3000, duration: 2, ease:"power4.out"});
+        tlTestimonials.from(testimonial[0], {x: -3000, rotation: 360, duration: 1.5, ease: "power4.out"});
+        tlTestimonials.from(testimonial[2], {x: 3000, rotation: 360, duration: 1.5, ease: "power4.out"});
+        tlTestimonials.from(testimonial[1], {scale: 0, duration: 2, ease: "power4.out"})
+
+        // Animations for tlCtaSection
+        tlCtaSection.from(".cta-section h2", {x: 3000, duration: 2, ease:"power4.out"});
+        tlCtaSection.from(".cta-section .cta-btn", {x: -3000, duration: 0.2, ease:"power2.out"});
+    }
+});
+
