@@ -196,7 +196,13 @@ header.active {
   padding-top: 1.3rem;
 }
 
+header.active .logo img {
+  width: 50%;
+}
+
 header .logo img {
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
   width: 86%;
 }
 
@@ -320,7 +326,7 @@ header .logo img {
 .nav-menu-wrapper {
   position: fixed;
   visibility: hidden;
-  top: 6.64875rem;
+  top: 5rem;
   right: -100%;
   width: 86.66%;
   height: 85vh;
@@ -344,7 +350,7 @@ header .logo img {
 }
 
 .nav-menu {
-  margin: 4rem 0;
+  margin: 6rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -11,12 +11,19 @@ header {
 
     &.active {
         padding-top: 1.3rem;
+
+        .logo {
+            
+            img {
+                width: 50%;
+            }
+        }
     }
 
     .logo {        
         
         img {
-            
+            transition: width .5s ease-in-out;
             width: 86%;
         }
     }
@@ -150,7 +157,7 @@ header {
     visibility: hidden;
         
     // top: 9.8125rem;
-    top: 6.64875rem;
+    top: 5rem;
     
     right: -100%;
 
@@ -176,7 +183,7 @@ header {
 
 .nav-menu {
     // border: 1px solid gold;
-    margin: 4rem 0;
+    margin: 6rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
