@@ -2,11 +2,13 @@ footer {
     padding: 4.59375rem $horizontal 1.6875rem $horizontal;
     background: $secondary;
     color: $neutral;
-
+    overflow-y: hidden;
+    
     .logo {
         // border: 1px solid white;
         margin-bottom: 3.875rem;
         text-align: center;
+        transform-origin: left;
 
         // a {            
         //     border: 1px solid red;
@@ -21,6 +23,7 @@ footer {
 
 .newsletter {
     text-align: center;
+    transform-origin: right;
 
     label {
         // border: 1px solid pink;
@@ -51,8 +54,12 @@ footer {
 
 }
 
+.nav-footer {
+    transform-origin: left;
+}
+
 .nav-menu-footer {
-    text-align: center;
+    text-align: center;    
 
     .nav-menu-item  {
         
@@ -74,9 +81,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 3.8125rem;
+    transform-origin: right;
 
     a {
+<<<<<<< HEAD
         display: flex;
+=======
+        display: flex   ;
+>>>>>>> test
         transition: .4s ease-in-out;
 
         svg {
@@ -95,15 +107,23 @@ footer {
             }
         }
 
+<<<<<<< HEAD
         &:focus, &:focus-visible {
             outline: 2px dashed $neutral;
             outline-offset: 8px;
             // outline-style: solid;            
+=======
+        &:focus-visible {
+            outline: 2px solid $neutral;
+            outline-offset: 8px;
+            outline-style: solid;            
+>>>>>>> test
         }
     }    
 }
 
 .attribution {
+    // transform-origin: left;
     margin-top: 2.875rem;
     text-align: center;
     font-size: $extra-small;

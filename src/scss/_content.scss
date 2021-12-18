@@ -18,8 +18,9 @@ main {
 // }
 
 .intro {
-    // border: 1px solid blue; 
+    
     text-align: center;
+    transform-origin: right;
 
     h2 {
         margin-bottom: 2.9375rem;
@@ -30,7 +31,13 @@ main {
         text-align: left;
     }
 
+    // a{
+    //     display: initial;
+    //     border: 1px solid black;
+    // }
+
     .cta-btn {
+        
         margin: 4.375rem auto 1.125rem auto;        
         // margin-top: 4.375rem;
         // margin-bottom: 1.125rem;        
@@ -39,6 +46,7 @@ main {
 
 .how-it-works {
     // border: 1px solid yellow;
+    transform-origin: left;
     text-align: center;
     padding-top: $vertical;
     padding-bottom: $vertical - 3.25rem;
