@@ -3,24 +3,24 @@ const menuBtn = document.querySelector('.menu-btn');
 const overlay = document.querySelector('.overlay');
 const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
-gsap.registerPlugin(ScrollTrigger);
-// const header = document.querySelector('header');
-const h1 = document.querySelector('h1');
-const topBar = document.querySelector('.top-bar');
-const heroImage = document.querySelector('.hero-image');
-
-const intro = document.querySelector('.intro');
-const howItWorks = document.querySelector('.how-it-works');
-
-const features = document.querySelector('.features');
-const h2 = document.querySelectorAll('h2');
-
-const testimonials = document.querySelector('.testimonials');
+const itemLink = document.querySelectorAll('.item-link');
+const itemLinkFooter = document.querySelectorAll('.item-link-footer');
+const itemLinkButton = document.querySelectorAll('.item-link-button');
+const allLinks = [itemLink, itemLinkFooter, itemLinkButton];
 const testimonial = document.querySelectorAll('.testimonial');
+const feature = document.querySelectorAll('.feature');
 
-console.log(features);
+// Call the function watchLinks to close mobile menu (if opened) when a link is clicked
+watchLinks(allLinks);
 
-animateElements();
+function watchLinks(allLinks) {
+    for (i = 0; i < 3; i++) {
+        allLinks[i].forEach(link => {
+            link.addEventListener('click', closeMenu);
+            // console.log(link);
+        })
+    }
+}
 
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
