@@ -595,6 +595,7 @@ footer {
   padding: 4.59375rem 1.5625rem 1.6875rem 1.5625rem;
   background: #212121;
   color: #F4FFE3;
+  overflow-y: hidden;
 }
 
 footer .logo {

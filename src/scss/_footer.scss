@@ -2,7 +2,8 @@ footer {
     padding: 4.59375rem $horizontal 1.6875rem $horizontal;
     background: $secondary;
     color: $neutral;
-
+    overflow-y: hidden;
+    
     .logo {
         // border: 1px solid white;
         text-align: center;

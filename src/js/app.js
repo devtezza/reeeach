@@ -75,9 +75,9 @@ tlHeader = gsap.timeline({
 tlAbout = gsap.timeline({
     scrollTrigger: {
         trigger: ".about",
-        markers: true,
-        start: "top 60%",
-        end: "bottom 60%"
+        // markers: true,
+        start: "top 65%",
+        end: "bottom 65%"
     }
 });
 
@@ -85,8 +85,8 @@ tlFeatures = gsap.timeline({
     scrollTrigger: {
         trigger: ".features",
         // markers: true,
-        start: "top 60%",
-        end: "bottom 60%",
+        start: "top 65%",
+        end: "bottom 65%",
     }
 });
 
@@ -94,8 +94,8 @@ tlTestimonials = gsap.timeline({
     scrollTrigger: {
         trigger: ".testimonials",
         // markers: true,
-        start: "top 60%",
-        end: "bottom 60%",
+        start: "top 65%",
+        end: "bottom 65%",
     }
 });
 
@@ -103,8 +103,8 @@ tlCtaSection = gsap.timeline({
     scrollTrigger: {
         trigger: ".cta-section",
         // markers: true,
-        start: "top 60%",
-        end: "bottom 60%",
+        start: "top 65%",
+        end: "bottom 65%",
     }
 });
 
@@ -175,19 +175,19 @@ ScrollTrigger.matchMedia({
         tlTestimonials.from(testimonial[2], {x: 3000, duration: 1.5, ease: "power4.out"});
 
         // Animations for Footer
-        tlFooter.from("footer .logo", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
-        tlFooter.from("footer .newsletter", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
-        tlFooter.from(".nav-footer", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
-        tlFooter.from(".social-icons", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
-        tlFooter.from(".attribution", {opacity: 0, y: 15, duration: 1.5, ease: "power4.out"});
+        tlFooter.from("footer .logo", {opacity: 0, y: 50, duration: 1, ease: "power4.out"});
+        tlFooter.from("footer .newsletter", {opacity: 0, y: 50, duration: 1, ease: "power4.out"});
+        tlFooter.from(".nav-footer", {opacity: 0, y: 50, duration: 1, ease: "power4.out"});
+        tlFooter.from(".social-icons", {opacity: 0, y: 50, duration: 1, ease: "power4.out"});
+        tlFooter.from(".attribution", {opacity: 0, y: 40, duration: 1.5, ease: "power4.out"});
     },
 
     // all devices
     "all": () => {
         // Animations for in tlHeader
+        tlHeader.from(".top-bar", {opacity: 0, duration: 0.8, ease: "power4.inOut"});
         tlHeader.from("h1", {x: -1000, duration: 2, ease: "power4.inOut"});
-        tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});
-        tlHeader.from(".top-bar", {opacity: 0, duration: 1, ease: "power4.inOut"});
+        tlHeader.from(".hero-img", {x: 1000, duration: 1.5, ease: "back.out(2)"});        
 
         // Animations for tlCtaSection
         tlCtaSection.from(".cta-section h2", {x: 3000, duration: 2, ease:"power4.out"});
