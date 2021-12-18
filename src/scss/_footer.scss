@@ -6,6 +6,7 @@ footer {
     .logo {
         // border: 1px solid white;
         text-align: center;
+        transform-origin: left;
 
         img {
             width: 32%;
@@ -16,6 +17,7 @@ footer {
 
 .newsletter {
     text-align: center;
+    transform-origin: right;
 
     label {
         // border: 1px solid pink;
@@ -46,8 +48,12 @@ footer {
 
 }
 
+.nav-footer {
+    transform-origin: left;
+}
+
 .nav-menu-footer {
-    text-align: center;
+    text-align: center;    
 
     .nav-menu-item  {
         
@@ -70,6 +76,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 3.8125rem;
+    transform-origin: right;
 
     a {
         display: flex   ;
@@ -103,6 +110,7 @@ footer {
 }
 
 .attribution {
+    // transform-origin: left;
     margin-top: 2.875rem;
     text-align: center;
     font-size: $extra-small;

@@ -408,6 +408,8 @@ main .cta-btn {
 
 .intro {
   text-align: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .intro h2 {
@@ -424,6 +426,8 @@ main .cta-btn {
 }
 
 .how-it-works {
+  -webkit-transform-origin: left;
+          transform-origin: left;
   text-align: center;
   padding-top: 5.5625rem;
   padding-bottom: 2.3125rem;
@@ -595,6 +599,8 @@ footer {
 
 footer .logo {
   text-align: center;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 footer .logo img {
@@ -604,6 +610,8 @@ footer .logo img {
 
 .newsletter {
   text-align: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .newsletter label {
@@ -625,6 +633,11 @@ footer .logo img {
 .email:focus, .email:focus-visible {
   outline: 3px solid #DBD61B;
   background-color: #F2F2F2;
+}
+
+.nav-footer {
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .nav-menu-footer {
@@ -652,6 +665,8 @@ footer .logo img {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 3.8125rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .social-icons a {
