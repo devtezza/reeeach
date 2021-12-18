@@ -15,12 +15,8 @@ html {
 body, html {
   font-size: 16px;
   background: #FFFFFF;
-<<<<<<< HEAD
-  scroll-behavior: smooth;
-=======
   overflow-x: hidden;
   height: 100%;
->>>>>>> test
 }
 
 body {
@@ -37,8 +33,6 @@ body.scrolling {
   overflow-y: hidden;
 }
 
-<<<<<<< HEAD
-=======
 header {
   height: 100vh;
 }
@@ -47,7 +41,6 @@ a, button, .menu-btn {
   -webkit-tap-highlight-color: transparent;
 }
 
->>>>>>> test
 .logo a:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
@@ -225,13 +218,8 @@ header .logo img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4.1875rem;
-<<<<<<< HEAD
-  -webkit-transform-origin: right;
-          transform-origin: right;
-=======
   -webkit-transform-origin: left;
           transform-origin: left;
->>>>>>> test
 }
 
 .top-bar .cta-btn {
@@ -711,16 +699,10 @@ footer .logo img {
   fill: #F4FFE3;
 }
 
-<<<<<<< HEAD
-.social-icons a:focus, .social-icons a:focus-visible {
-  outline: 2px dashed #F4FFE3;
-  outline-offset: 8px;
-=======
 .social-icons a:focus-visible {
   outline: 2px solid #F4FFE3;
   outline-offset: 8px;
   outline-style: solid;
->>>>>>> test
 }
 
 .attribution {

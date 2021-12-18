@@ -14,17 +14,11 @@ html {
 body, html {
     font-size: 16px;
     background: $light-minus;
-<<<<<<< HEAD
-    scroll-behavior: smooth;
-=======
     overflow-x: hidden;
     height: 100%;
->>>>>>> test
 }
 
-// header {
-//     overflow-y: hidden;
-// }
+
 
 body {
     // max-width: 1920px;
@@ -45,8 +39,6 @@ body {
        
 }
 
-<<<<<<< HEAD
-=======
 header {
     height: 100vh;
 }
@@ -55,7 +47,6 @@ a, button, .menu-btn {
     -webkit-tap-highlight-color: transparent;
 }
 
->>>>>>> test
 .logo {
 
     a {
@@ -63,12 +54,7 @@ a, button, .menu-btn {
             transform: translateY(-5px);
             
         }
-<<<<<<< HEAD
-    }
-   
-=======
     }   
->>>>>>> test
 }
 
 h1, h2, h3 {
