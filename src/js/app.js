@@ -75,9 +75,9 @@ tlHeader = gsap.timeline({
 tlAbout = gsap.timeline({
     scrollTrigger: {
         trigger: ".about",
-        // markers: true,
-        start: "10% center",
-        end: "bottom center"
+        markers: true,
+        start: "top 60%",
+        end: "bottom 60%"
     }
 });
 
@@ -85,8 +85,8 @@ tlFeatures = gsap.timeline({
     scrollTrigger: {
         trigger: ".features",
         // markers: true,
-        start: "10% center",
-        end: "bottom center",
+        start: "top 60%",
+        end: "bottom 60%",
     }
 });
 
@@ -94,8 +94,8 @@ tlTestimonials = gsap.timeline({
     scrollTrigger: {
         trigger: ".testimonials",
         // markers: true,
-        start: "top center",
-        end: "bottom center",
+        start: "top 60%",
+        end: "bottom 60%",
     }
 });
 
@@ -103,8 +103,8 @@ tlCtaSection = gsap.timeline({
     scrollTrigger: {
         trigger: ".cta-section",
         // markers: true,
-        start: "top center",
-        end: "bottom center",
+        start: "top 60%",
+        end: "bottom 60%",
     }
 });
 
@@ -140,6 +140,13 @@ ScrollTrigger.matchMedia({
 
         // Animations for CTA Section
         tlCtaSection.from(".cta-section .cta-img", {x: 3000, rotation: 360, duration: 2, ease:"power4.out"});
+
+        // Animations for Footer
+        tlFooter.from("footer .logo", {scale: 0, duration: 1, ease: "power4.out"});
+        tlFooter.from("footer .newsletter", {scale: 0, duration: 1, ease: "power4.out"});
+        tlFooter.from(".nav-footer", {scale: 0, duration: 1, ease: "power4.out"});
+        tlFooter.from(".social-icons", {scale: 0, duration: 1, ease: "power4.out"});
+        tlFooter.from(".attribution", {scale: 0, duration: 1.5, ease: "power4.out"});
     },
 
     // mobile devices
@@ -166,6 +173,13 @@ ScrollTrigger.matchMedia({
         tlTestimonials.from(testimonial[0], {x: 3000, duration: 1.5, ease: "power4.out"});
         tlTestimonials.from(testimonial[1], {x: -3000, duration: 1.5, ease: "power4.out"});
         tlTestimonials.from(testimonial[2], {x: 3000, duration: 1.5, ease: "power4.out"});
+
+        // Animations for Footer
+        tlFooter.from("footer .logo", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
+        tlFooter.from("footer .newsletter", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
+        tlFooter.from(".nav-footer", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
+        tlFooter.from(".social-icons", {opacity: 0, y: 15, duration: 1, ease: "power4.out"});
+        tlFooter.from(".attribution", {opacity: 0, y: 15, duration: 1.5, ease: "power4.out"});
     },
 
     // all devices
@@ -179,11 +193,6 @@ ScrollTrigger.matchMedia({
         tlCtaSection.from(".cta-section h2", {x: 3000, duration: 2, ease:"power4.out"});
         tlCtaSection.from(".cta-section .cta-btn", {x: -3000, duration: 0.2, ease:"power2.out"});        
         
-        // Animations for Footer
-        tlFooter.from("footer .logo", {scale: 0, duration: 1, ease: "power4.out"});
-        tlFooter.from("footer .newsletter", {scale: 0, duration: 1, ease: "power4.out"});
-        tlFooter.from(".nav-footer", {scale: 0, duration: 1, ease: "power4.out"});
-        tlFooter.from(".social-icons", {scale: 0, duration: 1, ease: "power4.out"});
-        tlFooter.from(".attribution", {scale: 0, duration: 1.5, ease: "power4.out"});
+       
     }
 });
