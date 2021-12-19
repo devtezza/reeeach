@@ -12,11 +12,11 @@ button {
 
     &.primary-btn {
         
-        &:hover {
+        &:hover, &:active {
             color: $primary;
         }
 
-        &:focus, &:focus-visible {
+        &:focus-visible {
             outline: 3px solid $neutral;
             outline-offset: 1px;
         }
@@ -24,18 +24,18 @@ button {
 
     &.secondary-btn {
 
-        &:hover {
+        &:hover, &:active {
             color: $dark-plus
         }
 
-        &:focus, &:focus-visible {
+        &:focus-visible {
             outline: 3px solid $primary-plus;
             outline-offset: 2px;
             box-shadow: none;
         }
     }
 
-    &:hover {
+    &:hover, &:active {
 
         &:after {
             transform: scaleX(1);
@@ -67,15 +67,6 @@ button:after {
 .secondary-btn:after {
     background: $primary-plus;
 }
-
-// .primary-btn:hover {
-    
-//     &:after {
-//         transform: scaleX(1);
-//     }
-// }
-
-
 
 .cta-btn {
     width: 15.1875rem;

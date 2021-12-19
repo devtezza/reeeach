@@ -10,22 +10,16 @@ const allLinks = [itemLink, itemLinkFooter, itemLinkButton];
 const testimonial = document.querySelectorAll('.testimonial');
 const feature = document.querySelectorAll('.feature');
 
-// Call the function watchLinks to close mobile menu (if opened) when a link is clicked
-watchLinks(allLinks);
-
-function watchLinks(allLinks) {
-    for (i = 0; i < 3; i++) {
-        allLinks[i].forEach(link => {
-            link.addEventListener('click', closeMenu);
-            // console.log(link);
-        })
-    }
-}
-
 menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter') {
+        toggleMenu();
+    }
+});
+
 overlay.addEventListener('click', toggleMenu);
 
-
+// Verify if menu is opened
 function verifyMenu() {
     if (navMenuWrapper.classList.contains('active')) {        
         return true;
@@ -34,6 +28,7 @@ function verifyMenu() {
     }
 }
 
+// Toggle menu between closed and opened
 function toggleMenu() {
     menuBtn.classList.toggle('active');
     navMenuWrapper.classList.toggle('active');
@@ -42,7 +37,7 @@ function toggleMenu() {
     document.body.classList.toggle('scrolling');
 }
 
-// Closes menu on resize and on any menu-link
+// Close menu on resize and after any menu item is clicked
 function closeMenu() {
     console.log('enter closeMenu function');
     if (verifyMenu()) {
@@ -53,6 +48,7 @@ function closeMenu() {
     } 
 }
 
+// Watch window resize event
 window.addEventListener('resize', () => {
     
     if (this.innerWidth > 1023) {        
@@ -60,12 +56,23 @@ window.addEventListener('resize', () => {
     } 
  });
 
+// Close mobile menu when a menu item is clicked
+function watchLinks(allLinks) {
+    for (i = 0; i < 3; i++) {
+        allLinks[i].forEach(link => {
+            link.addEventListener('click', closeMenu);
+            // console.log(link);
+        })
+    }
+}
 
- 
+watchLinks(allLinks);
 
-
+// Begin the code related to GSAP library to handle some animations
 gsap.registerPlugin(ScrollTrigger);
 
+
+// Create the gsap animations timelines
 tlHeader = gsap.timeline({
     scrollTrigger: {
         trigger: header,        
@@ -117,9 +124,9 @@ tlFooter = gsap.timeline({
    }
 });
 
-
+// Responsive animations and triggers based on device's screen size
 ScrollTrigger.matchMedia({
-    // desktop devices
+    // Desktop devices
     "(min-width: 1024px)": () => {
         // Animations in tlAbout (div -> Intro)
         tlAbout.from(".intro", {x: 3000, duration: 1.5, ease: "power4.out"});        
@@ -149,7 +156,7 @@ ScrollTrigger.matchMedia({
         tlFooter.from(".attribution", {scale: 0, duration: 1.5, ease: "power4.out"});
     },
 
-    // mobile devices
+    // Mobile devices
     "(max-width: 1023px)": () => {
         // Animations in tlAbout (div -> Intro)
         tlAbout.from(".intro h2", {x: 3000, duration: 1, ease: "power4.out"});
@@ -182,7 +189,7 @@ ScrollTrigger.matchMedia({
         tlFooter.from(".attribution", {opacity: 0, y: 40, duration: 1.5, ease: "power4.out"});
     },
 
-    // all devices
+    // All devices
     "all": () => {
         // Animations for in tlHeader
         tlHeader.from(".top-bar", {opacity: 0, duration: 0.8, ease: "power4.inOut"});

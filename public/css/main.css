@@ -22,7 +22,7 @@ body, html {
 body {
   background: #F2F2F2;
   overflow-x: hidden;
-  max-width: 1440px;
+  max-width: 1920px;
   min-width: 300px;
   margin: 0 auto;
   font-weight: 400;
@@ -41,9 +41,19 @@ a, button, .menu-btn {
   -webkit-tap-highlight-color: transparent;
 }
 
+.logo img {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
 .logo a:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+.logo a:focus-visible img {
+  outline: 1px solid #F4FFE3;
+  outline-offset: 10px;
 }
 
 h1, h2, h3 {
@@ -96,12 +106,12 @@ a.item-link-footer:hover {
           transform: translateY(-2px);
 }
 
-a.item-link:focus, a.item-link:focus-visible {
+a.item-link:focus-visible {
   outline: 1px solid #F4FFE3;
   outline-offset: 5px;
 }
 
-a.item-link-footer:focus, a.item-link-footer:focus-visible {
+a.item-link-footer:focus-visible {
   -webkit-text-decoration: underline 4px dashed #F3EE1E;
           text-decoration: underline 4px dashed #F3EE1E;
 }
@@ -119,27 +129,27 @@ button {
   transition: .4s ease-in-out;
 }
 
-button.primary-btn:hover {
+button.primary-btn:hover, button.primary-btn:active {
   color: #F3EE1E;
 }
 
-button.primary-btn:focus, button.primary-btn:focus-visible {
+button.primary-btn:focus-visible {
   outline: 3px solid #F4FFE3;
   outline-offset: 1px;
 }
 
-button.secondary-btn:hover {
+button.secondary-btn:hover, button.secondary-btn:active {
   color: #000000;
 }
 
-button.secondary-btn:focus, button.secondary-btn:focus-visible {
+button.secondary-btn:focus-visible {
   outline: 3px solid #DBD61B;
   outline-offset: 2px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-button:hover:after {
+button:hover:after, button:active:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -193,18 +203,16 @@ header {
   color: #F4FFE3;
 }
 
+header .logo img {
+  width: 86%;
+}
+
 header.active {
   padding-top: 1.3rem;
 }
 
 header.active .logo img {
   width: 50%;
-}
-
-header .logo img {
-  -webkit-transition: width .5s ease-in-out;
-  transition: width .5s ease-in-out;
-  width: 86%;
 }
 
 .top-bar {
@@ -231,16 +239,19 @@ header .logo img {
   height: 2.0625rem;
   width: 3.125rem;
   cursor: pointer;
-  -webkit-transition: -webkit-transform .35s ease-in-out;
-  transition: -webkit-transform .35s ease-in-out;
-  transition: transform .35s ease-in-out;
-  transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
   z-index: 501;
 }
 
 .menu-btn:hover {
   -webkit-transform: translate(-3px, 1px);
           transform: translate(-3px, 1px);
+}
+
+.menu-btn:focus-visible {
+  outline: 1px solid #F4FFE3;
+  outline-offset: 5px;
 }
 
 .menu-hamburger-1, .menu-hamburger-2, .menu-hamburger-3 {
@@ -636,6 +647,8 @@ footer .logo img {
   background: #E3E3E3 url("/assets/icons/envelope.svg") no-repeat 1.25rem center;
   border: none;
   outline: none;
+  -webkit-transition: outline .3  s ease-in-out;
+  transition: outline .3  s ease-in-out;
 }
 
 .email:focus, .email:focus-visible {

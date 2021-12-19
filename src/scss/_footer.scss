@@ -4,15 +4,10 @@ footer {
     color: $neutral;
     overflow-y: hidden;
     
-    .logo {
-        // border: 1px solid white;
+    .logo {        
         margin-bottom: 3.875rem;
         text-align: center;
         transform-origin: left;
-
-        // a {            
-        //     border: 1px solid red;
-        // }
 
         img {
             width: 32%;
@@ -25,9 +20,7 @@ footer {
     text-align: center;
     transform-origin: right;
 
-    label {
-        // border: 1px solid pink;
-        // margin-bottom: 1.625rem;
+    label {        
         font-size: $subtitle;
     }
 }
@@ -42,12 +35,12 @@ footer {
     padding-left: 4.5625rem;
     
     background: $light-plus url('/assets/icons/envelope.svg') no-repeat 1.25rem center;
-    //border: 2px solid transparent;
+    
     border: none;
     outline: none;
+    transition: outline .3  s ease-in-out;
 
-    &:focus, &:focus-visible {
-        //border: 2px solid $primary-plus;
+    &:focus, &:focus-visible {        
         outline: 3px solid $primary-plus;
         background-color: $light;
     }
@@ -64,11 +57,7 @@ footer {
     .nav-menu-item  {
         
         margin-bottom: 1.5rem;
-        transition: .2s ease-in-out;
-
-        // &:hover {
-        //     transform: translateY(-2px);
-        // }
+        transition: .2s ease-in-out;        
 
         a {             
             font-size: $subtitle;
@@ -95,7 +84,7 @@ footer {
 
         &:hover {
             transform: translateY(-5px);
-            // transform: rotate(10deg) translateY(-5px);
+            
             svg {
                 path {
                     fill: $neutral;
@@ -111,8 +100,7 @@ footer {
     }    
 }
 
-.attribution {
-    // transform-origin: left;
+.attribution {   
     margin-top: 2.875rem;
     text-align: center;
     font-size: $extra-small;

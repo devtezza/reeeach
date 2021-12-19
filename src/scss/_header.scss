@@ -9,6 +9,13 @@ header {
     background: $secondary;
     color: $neutral;
 
+    .logo {        
+        
+        img {            
+            width: 86%;
+        }
+    }
+
     &.active {
         padding-top: 1.3rem;
 
@@ -18,15 +25,7 @@ header {
                 width: 50%;
             }
         }
-    }
-
-    .logo {        
-        
-        img {
-            transition: width .5s ease-in-out;
-            width: 86%;
-        }
-    }
+    }   
 }
 
 .top-bar {
@@ -51,14 +50,17 @@ header {
     height: 2.0625rem;
     width: 3.125rem;
     cursor: pointer;
-    transition: transform .35s ease-in-out;  
+    transition: all .35s ease-in-out;  
 
     z-index: 501;
 
-    &:hover {
-        
-        transform: translate(-3px, 1px);        
-        
+    &:hover {        
+        transform: translate(-3px, 1px);
+    }
+
+    &:focus-visible {
+        outline: 1px solid $neutral;
+        outline-offset: 5px;
     }
    
 }
