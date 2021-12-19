@@ -309,6 +309,7 @@ header.active .logo img {
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: 500;
   opacity: 0;
   visibility: hidden;
   background: #000000;
@@ -398,7 +399,7 @@ header.active .logo img {
 }
 
 .hero-section img {
-  max-width: 100%;
+  width: 100%;
 }
 
 main {
@@ -912,9 +913,11 @@ footer .logo img {
     font-size: 2.075rem;
     font-weight: 600;
   }
-  .features {
+  .features, .testimonials {
     padding-left: calc(2.8125rem + 2.75%);
     padding-right: calc(2.8125rem + 2.75%);
+  }
+  .features {
     padding-top: 8.125rem;
   }
   .features h2 {
@@ -936,8 +939,6 @@ footer .logo img {
     margin-bottom: 5.9375rem;
   }
   .testimonials {
-    padding-left: calc(2.8125rem + 2.75%);
-    padding-right: calc(2.8125rem + 2.75%);
     padding-top: 8.125rem;
   }
   .testimonials h2 {
@@ -1003,7 +1004,7 @@ footer .logo img {
     max-height: 32.625rem;
   }
   .cta-section .cta-img img {
-    width: 100%;
+    width: calc(min(100%, 32rem));
   }
   footer {
     padding: 7.125rem calc(2.8125rem + 2.75%) 0 calc(2.8125rem + 2.75%);
@@ -1129,11 +1130,7 @@ footer .logo img {
   .how-it-works {
     padding-left: 7.34375rem;
   }
-  .features {
-    padding-left: 8.875rem;
-    padding-right: 8.875rem;
-  }
-  .testimonials {
+  .features, .testimonials, .cta-section {
     padding-left: 8.875rem;
     padding-right: 8.875rem;
   }
@@ -1146,10 +1143,6 @@ footer .logo img {
   .testimonial .content {
     padding-left: 2.75rem;
     padding-right: 2.75rem;
-  }
-  .cta-section {
-    padding-left: 8.875rem;
-    padding-right: 8.875rem;
   }
   .cta-text {
     padding-top: 10.3125rem;

@@ -3,7 +3,6 @@ header {
     padding-left: $horizontal;
     padding-right: $horizontal;
     padding-top: 2.85125rem;
-    // padding-top: 1.3rem;
     padding-bottom: 6.625rem;
     margin: 0;
     background: $secondary;
@@ -86,22 +85,18 @@ header {
 
 .active {
 
-    .menu-hamburger-2 {
-        // transform-origin: right;
-        transform: scaleX(0);        
-        // background: transparent;
+    .menu-hamburger-2 {        
+        transform: scaleX(0);
         transition: transform .4s ease-in;
     }
 
     .menu-hamburger-1 {
-        // transform: rotate(45deg) translate(21.75px, 15px);
         transform: translate(0, 15px) rotate(40deg);
         background: $primary;
         transition: all .4s ease-in;
     }
 
     .menu-hamburger-3 {
-        // transform: rotate(-45deg) translate(-21.75px, -15px);
         transform: translate(0, -15px) rotate(-40deg);
         background: $primary;
         transition: all .4s ease-in;
@@ -114,7 +109,7 @@ header {
     top: 0;
     height: 100%;
     width: 100%;
-    // z-index: 500;
+    z-index: 500;
     opacity: 0;
     visibility: hidden;
     background: $dark-plus;
@@ -127,11 +122,8 @@ header {
  }
 
 .nav-wrapper {
-    // opacity: 50%;
-    // border: 1px solid gold;
     transition: right .5s ease-in-out;
     position: fixed;
-    // visibility: hidden;
     
     display: flex;
     justify-content: center;
@@ -140,31 +132,17 @@ header {
     background: transparent;
 
     z-index: 501;
-
-    // &.active {
-    //     // visibility: visible;
-    //     right: 0;
-       
-    // }
     
 }
 
-.nav-menu-wrapper {
-    // border: 1px solid orange;
-    // height: 34.4375rem;
-    
+.nav-menu-wrapper {    
     
     position: fixed;
-
     visibility: hidden;
-        
-    // top: 9.8125rem;
-    top: 5rem;
-    
+    top: 5rem;    
     right: -100%;
 
-    width: 86.66%;
-    // height: calc(min(80vh, 40rem));
+    width: 86.66%;    
     height: max(85vh);
 
     display: flex;
@@ -184,7 +162,6 @@ header {
 }
 
 .nav-menu {
-    // border: 1px solid gold;
     margin: 6rem 0;
     display: flex;
     flex-direction: column;
@@ -193,7 +170,6 @@ header {
     position: relative;   
 
     .nav-menu-item {
-        // border: 2px solid pink;
         width: 100%;
         text-align: center;
         position: relative;
@@ -201,7 +177,6 @@ header {
 
         &::after {
             content: '';
-            // border: 1px solid gold;
             width: 100%;
             height: 0.03125rem;
             position: absolute;
@@ -209,14 +184,13 @@ header {
             left: 0;
             background: $secondary-minus;
         }
-    }
-    
+    }    
 }
 
 .hero-section {
     
     img {
-        max-width: 100%;
+        width: 100%;
         
     }
 }

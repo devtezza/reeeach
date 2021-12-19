@@ -13,10 +13,6 @@ main {
     }
 }
 
-// .about {
-//     border: 1px solid red;
-// }
-
 .intro {
     
     text-align: center;
@@ -31,21 +27,12 @@ main {
         text-align: left;
     }
 
-    // a{
-    //     display: initial;
-    //     border: 1px solid black;
-    // }
-
-    .cta-btn {
-        
-        margin: 4.375rem auto 1.125rem auto;        
-        // margin-top: 4.375rem;
-        // margin-bottom: 1.125rem;        
+    .cta-btn {        
+        margin: 4.375rem auto 1.125rem auto;  
     }
 }
 
 .how-it-works {
-    // border: 1px solid yellow;
     transform-origin: left;
     text-align: center;
     padding-top: $vertical;
@@ -58,7 +45,6 @@ main {
     ul {
         margin: 0 auto;
         text-align: center;
-        // border: 1px solid blue;
     }
 
     li {
@@ -88,8 +74,7 @@ main {
    
 }
 
-.features {    
-    // border: 1px solid red;
+.features {
     background: $neutral-minus;
     text-align: center;
 
@@ -132,9 +117,7 @@ main {
     }
 }
 
-.testimonials {
-    // border: 1px solid gold;
-    
+.testimonials {    
     margin-bottom: 0.3125rem;
     h2 {
         transform-origin: right;
@@ -166,12 +149,10 @@ main {
     }
 
     .header-text {
-        // border: 1px solid purple;
         padding: 1.4375rem 0 0.9375rem 0.625rem;
     }
 
-    .header-img {
-        // border: 1px solid purple;
+    .header-img {       
         display: flex;
     }
 
@@ -188,7 +169,6 @@ main {
 }
 
 .cta-section {
-    // border: 1px solid purple;
     background: $neutral-minus;
     text-align: center;
 

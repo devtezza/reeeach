@@ -136,14 +136,14 @@ ScrollTrigger.matchMedia({
        
         // Animations for tlFeatures
         tlFeatures.from(".features h2", {x: 3000, duration: 2, ease: "power4.out"});
-        tlFeatures.from(".feature", {scale: 0, duration: 3, ease: "power2.out", stagger: 0.7});
+        tlFeatures.from(".feature", {scale: 0, duration: 1, ease: "power2.out", stagger: 0.5});
         tlFeatures.from(".features .cta-btn", {x: -3000, duration: 0.1, ease: "power4.out"});
 
         // Animations for tlTestimonials
         tlTestimonials.from(".testimonials h2", {x: -3000, duration: 2, ease:"power4.out"});
-        tlTestimonials.from(testimonial[0], {x: -3000, duration: 1.5, ease: "power4.out"});
-        tlTestimonials.from(testimonial[2], {x: 3000, duration: 1.5, ease: "power4.out"});
-        tlTestimonials.from(testimonial[1], {scale: 0, duration: 2, ease: "power4.out"});
+        tlTestimonials.from(testimonial[0], {x: -3000, duration: 1, ease: "power4.out"});
+        tlTestimonials.from(testimonial[2], {x: 3000, duration: 1, ease: "power4.out"});
+        tlTestimonials.from(testimonial[1], {scale: 0, duration: 1.5, ease: "power4.out"});
 
         // Animations for CTA Section
         tlCtaSection.from(".cta-section .cta-img", {x: 3000, rotation: 360, duration: 2, ease:"power4.out"});
@@ -169,17 +169,17 @@ ScrollTrigger.matchMedia({
  
         // Animations for tlFeatures
         tlFeatures.from(".features h2", {x: 3000, duration: 2, ease: "power4.out"});
-        tlFeatures.from(feature[0], {scale: 0, duration: 1.5, ease: "power2.out"});
-        tlFeatures.from(feature[1], {scale: 0, duration: 1.5, ease: "power2.out"});
-        tlFeatures.from(feature[2], {scale: 0, duration: 1.5, ease: "power2.out"});
-        tlFeatures.from(feature[3], {scale: 0, duration: 1.5, ease: "power2.out"}); 
+        tlFeatures.from(feature[0], {scale: 0, duration: 1.2, ease: "power2.out"});
+        tlFeatures.from(feature[1], {scale: 0, duration: 1.2, ease: "power2.out"});
+        tlFeatures.from(feature[2], {scale: 0, duration: 1.2, ease: "power2.out"});
+        tlFeatures.from(feature[3], {scale: 0, duration: 1.2, ease: "power2.out"}); 
         tlFeatures.from(".features .cta-btn", {x: -3000, duration: 0.1, ease: "power4.out"});
  
         // Animations for tlTestimonials
         tlTestimonials.from(".testimonials h2", {x: -3000, duration: 2, ease:"power4.out"});
-        tlTestimonials.from(testimonial[0], {x: 3000, duration: 1.5, ease: "power4.out"});
-        tlTestimonials.from(testimonial[1], {x: -3000, duration: 1.5, ease: "power4.out"});
-        tlTestimonials.from(testimonial[2], {x: 3000, duration: 1.5, ease: "power4.out"});
+        tlTestimonials.from(testimonial[0], {x: 3000, duration: 1.2, ease: "power4.out"});
+        tlTestimonials.from(testimonial[1], {x: -3000, duration: 1.2, ease: "power4.out"});
+        tlTestimonials.from(testimonial[2], {x: 3000, duration: 1.2, ease: "power4.out"});
 
         // Animations for Footer
         tlFooter.from("footer .logo", {opacity: 0, y: 50, duration: 1, ease: "power4.out"});

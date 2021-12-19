@@ -39,15 +39,13 @@
 @include media-sm {
     
 
-    .hero-section {        
-        // border: 1px solid orange;
+    .hero-section {
         width: calc(min(95%, 45rem));
         margin: 0 auto;
                 
         text-align: center;
 
         h1 {
-            // text-align: left;
             max-width: 32.625rem;
             margin: 0 auto;
         }
@@ -69,7 +67,6 @@
 
     .how-it-works {
         ul {
-            // border: 1px solid red;
             width: calc(min(90%, 20.3125rem));            
         }
     }
@@ -110,7 +107,6 @@
 @include media-lg {
 
     header {
-
         padding-left: 2.8125rem;
         padding-right: 2.8125rem;
 
@@ -131,15 +127,12 @@
     }
 
     .nav-menu-wrapper {
-        // border: 1px solid red;
-        // transition: all .5s ease-in-out, right 0s;
         visibility: visible;
         position: relative;
         top: 0;
         right: 0;
        
         justify-content: flex-end;
-        // width: calc(min(100%, 1440px)); 
         background-color: transparent;
         height: 5.8125rem;
         width: 86%;
@@ -162,8 +155,7 @@
         }        
     }
 
-    .hero-section {
-        // border: 1px solid orange;        
+    .hero-section {    
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -172,8 +164,7 @@
         padding-right: 0.5%;
         padding-left: 2.75%;
 
-        h1 {
-            // border: 1px solid blue;           
+        h1 {         
             text-align: left;
             font-size: clamp(2rem, 4vw, $h1-lg);
             margin: 0;
@@ -181,13 +172,7 @@
         }
     }
 
-    // section {
-    //     padding-left: 2.8125rem;
-    //     padding-right: 2.8125rem;
-    // }
-
     .about {
-        // border: 1px solid green;
         display: flex;        
         padding: 10rem calc(2.8125rem + 2.75%);       
     }
@@ -196,7 +181,6 @@
         width: 50%;
         text-align: left;
         h2 {
-            // border: 1px solid red;
             margin-bottom: 7.25rem;
             text-align: left;            
         }
@@ -205,10 +189,8 @@
     .intro {
         width: 50%;
         padding: 0;
-        // border: 1px solid blue;
 
         p {
-            // border: 1px solid gold;
             width: 100%;          
             text-align: left;
             margin-left: 0;
@@ -217,12 +199,10 @@
         .cta-btn {
             margin-top: 4.375rem;
             margin-left: 0;
-            // margin-bottom: $vertical;
         }
     }
 
     .how-it-works {
-        // border: 1px solid black;
         padding-top: 0;
         padding-left: 4.5rem; 
 
@@ -246,22 +226,22 @@
         
     }
 
+    .features, .testimonials {
+        @include padding-x-lg;
+    }
+
     .features {
-        padding-left: calc(2.8125rem + 2.75%);
-        padding-right: calc(2.8125rem + 2.75%);
         padding-top: 8.125rem;
 
         h2 {
             margin-bottom: 7.0625rem;
         }
 
-        ul {            
-            // border: 1px solid orange;            
+        ul {       
             display: flex;
             justify-content: space-between;
 
             li {
-                // border: 1px solid blue;
                 margin-bottom: 0;
             }
         }
@@ -272,10 +252,7 @@
         }
     }
 
-    .testimonials {
-        padding-left: calc(2.8125rem + 2.75%);
-        padding-right: calc(2.8125rem + 2.75%);
-        
+    .testimonials {        
         padding-top: 8.125rem;
 
         h2 {
@@ -285,13 +262,11 @@
 
     .testimonials-container {
         padding: 0;
-        // border: 1px solid blueviolet;
         display: flex;        
         justify-content: space-between;
     }
 
     .testimonial {
-        // border: 1px solid green;
         width: calc(min(31.21%, 20.8125rem));
         margin: 0;
         margin-bottom: 7.5rem;
@@ -302,7 +277,6 @@
         }
 
         .header-img {
-            // border: 1px solid green;
             align-self: center;
             justify-content: center;
         }
@@ -315,13 +289,8 @@
 
     .cta-section {
         display: flex;
-        // justify-content: space-between;
-        align-items: center;
-        
-
-        padding: 1.5rem calc(2.8125rem + 2.75%);
-        // padding-left: calc(2.8125rem + 2.75%);
-        // padding-right: calc(2.8125rem + 2.75%);
+        align-items: center; 
+        padding: 1.5rem calc(2.8125rem + 2.75%);        
 
         .cta-text, .cta-img {
             width: 50%;
@@ -338,7 +307,6 @@
         }
 
         .cta-btn {
-            // margin-top: 5.25rem;
             margin-bottom: 0;
         }
 
@@ -346,7 +314,7 @@
             display: block;
             max-height: 32.625rem;
             img {
-                width: 100%;
+                width: calc(min(100%, 32rem));
             }
         }
     
@@ -370,15 +338,9 @@
             text-align: left;
             
             img {
-                // border: 1px solid red;
                 width: 50%;
-                // margin-bottom: 2.1875rem;
             }
         }
-
-        // .newsletter {
-        //     grid-area: newsletter;
-        // }
 
         .newsletter {
             grid-area: newsletter;
@@ -414,10 +376,8 @@
         }
        
         .nav-footer {
-            // border: 1px solid green;
             margin: initial;
-            grid-area: nav-footer;
-            // align-self: ; 
+            grid-area: nav-footer;          
         }
 
         .nav-menu-footer {
@@ -440,15 +400,7 @@
         }
     }
 
-    // .social-icons {
-    //     border: 1px solid orange;
-    //     grid-area: social-icons;
-    //     padding-top: 2rem;            
-
-    // }
-
     .social-icons {
-        // border: 1px solid red;
         grid-area: social-icons;
         padding: 0 0 1.5rem 0;               
         margin: 0;
@@ -457,9 +409,7 @@
     }
 
     .attribution {
-        // border: 1px solid gold;
         grid-area: attribution;
-        // margin: initial;
         margin-top: 2.6875rem;
         padding-bottom: 0.5rem;
     }
@@ -481,20 +431,11 @@
         padding-left: 7.34375rem;
     }
 
-    .features {
-        padding-left: 8.875rem;
-        padding-right: 8.875rem;        
-    }
+    .features, .testimonials, .cta-section {
+        @include padding-x-xl;
+    }    
 
-    .testimonials {
-        // padding-left: calc(2.8125rem + 8.875rem);
-        // padding-right: calc(2.8125rem + 8.875rem);
-        padding-left: 8.875rem;
-        padding-right: 8.875rem;
-    }
-
-    .testimonial {
-        
+    .testimonial {        
        
         header {
             align-items: center;
@@ -505,16 +446,9 @@
             padding-left: 2.75rem;
             padding-right: 2.75rem;
         }
-    }
-
-    .cta-section {
-        padding-left: 8.875rem;
-        padding-right: 8.875rem;
-        // align-items: flex-start;
-    }
+    }   
 
     .cta-text {
-        // border: 1px solid green;
         padding-top: 10.3125rem;
         padding-bottom: 10.3125rem;
     }

@@ -25,7 +25,7 @@ body {
     background: $light;
     overflow-x: hidden;    
 
-    max-width: 1920px;
+    max-width: 1920px;    
     min-width: 300px;
     margin: 0 auto;     
 
@@ -154,4 +154,14 @@ a {
     @media screen and (max-width: 360px) {
         @content;
     }
+}
+
+@mixin padding-x-lg {
+    padding-left: calc(2.8125rem + 2.75%);
+    padding-right: calc(2.8125rem + 2.75%);
+}
+
+@mixin padding-x-xl {
+    padding-left: 8.875rem;
+    padding-right: 8.875rem;  
 }
