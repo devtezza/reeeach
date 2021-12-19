@@ -34,11 +34,11 @@ O objetivo desse projeto é praticar UI design (usando Figma) e habilidades de d
 
 #### Mobile
 
-![Mobile](design\mobile-layout.png)
+![Mobile](design/mobile-layout.png)
 
 #### Desktop
 
-![Desktop](design\desktop-layout.png)
+![Desktop](design/desktop-layout.png)
 
 ### Demonstração
 [Ver demonstração do site](https://nandotezza.github.io/reeeach/)

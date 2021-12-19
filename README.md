@@ -33,11 +33,11 @@ The purpose of this project is to practice UI design (using Figma) and front end
 
 #### Mobile
 
-![Mobile](design\mobile-layout.png)
+![Mobile](design/mobile-layout.png)
 
 #### Desktop
 
-![Desktop](design\desktop-layout.png)
+![Desktop](design/desktop-layout.png)
 
 ### Live Site
 [Go to Live Site](https://nandotezza.github.io/reeeach/)
