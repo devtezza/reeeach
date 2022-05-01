@@ -40,7 +40,7 @@ The purpose of this project is to practice UI design (using Figma) and front end
 ![Desktop](design/desktop-layout.png)
 
 ### Live Site
-[Go to Live Site](https://nandotezza.github.io/reeeach/)
+[Go to Live Site](https://devtezza.github.io/reeeach/)
 
 ### Tools
 
@@ -65,8 +65,8 @@ Libraries:
 
 ## Author
 
-[Fernando Tezza](https://github.com/nandotezza) \
-[Linkedin](https://www.linkedin.com/feed/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/nandotezza)
+[Fernando Tezza](https://github.com/devtezza) \
+[Linkedin](https://www.linkedin.com/in/devtezza/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/devtezza)
 
 ## License
 
